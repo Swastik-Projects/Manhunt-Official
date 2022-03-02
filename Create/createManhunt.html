@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manhunt Official</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+  <!--form-content-->
+  <form id="form-id">
+    <!--Progressbar-->
+    <ul class='progress'>
+      <li class="active">Create</li>
+      <li>Others</li>
+      <li>Manhunt Details</li>
+    </ul>
+    <!--Account Setup-->
+    <fieldset>
+      <h2 class='title'>Create Server</h2>
+      <h3 class='sub-title'>Create the manhunt server here</h3>
+      <label for="slots">Slots</label>
+      <input type='number' name='slots' placeholder='Slots' id='slots' value="10" disabled>
+
+      <label for="speedrunners">Speedrunners</label>
+      <input type='number' name='speedrunners' placeholder='Speedrunners' id='speedrunners' value="1" disabled>
+      <input type='text' name='text' placeholder='Speedrunner Username' id='speedrunner_username'>
+
+      <label for="hunters">Hunters</label>
+      <input type='text' name='hunters' placeholder='Hunters' id='hunters' value="All" disabled>
+
+      <label for="seed">Seed</label>
+      <input type='text' name='seed' placeholder='Seed' id='seed' value="Random" disabled>
+      <input type='button' name='next' class='next-button custom-button' value="Next">
+    </fieldset>
+    <!--Social Profiles-->
+    <fieldset>
+      <h2 class='title'>Other Details</h2>
+      <h3 class='sub-title'>Create the manhunt server even better</h3>
+      <label for="">Give Hunters Compass</label>
+      <select name="Compass" class="select" id="compass_given">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="">Full Heath all Players</label>
+      <select name="Compass" class="select" id="full_health">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="">Give everyone OP after speedrunner dies</label>
+      <select name="Compass" class="select" id="op_after_end">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <h3 class='sub-title'>Add Player</h3>
+      <input type='text' name='text' placeholder='Players' id='player_element'>
+
+      <input type='button' name='add' class='button' id="addPlayer" value="Add">
+      <input type='button' name='previous' class='prev-button custom-button' value="Back">
+      <input type='button' name='next' class='next-button custom-button' value="Next">
+    </fieldset>
+    <!--Personal Details-->
+    <fieldset>
+      <h2 class='title'>Manhunt Details</h2>
+      <h3 class='sub-title'>The Details of your Manhunt</h3>
+      <input type='button' name='add' class='button' id="showPlayers" value="Show Players">
+      <div id="players"></div>
+      <input type='button' name='previous' class='prev-button custom-button' value="Back">
+      <input type='button' name='Submit' class='submit-button custom-button' value="Submit" id='submit'>
+    </fieldset>
+
+    <fieldset>
+      <h2 class='title'>Manhunt Details</h2>
+      <h3 class='sub-title'>The Fixed Details of your Manhunt</h3>
+      <h3 class='sub-title'>Seed: Random</h3>
+      <h3 class='sub-title'>Slots: 10</h3>
+      <h3 class='sub-title'>IP: manhuntofficial.tk</h3>
+      <h3 class='sub-title' id='unique_id_h3'>Unique ID: <b>Generating....</b></h3>
+      <a id="start" href="startServer.html">Start Server</a>
+    </fieldset>
+
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+
+  </form>
+</body>
+
+</html>

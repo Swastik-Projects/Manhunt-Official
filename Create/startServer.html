@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manhunt Official</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+  <!--form-content-->
+  <form id="form-id">
+    <!--Progressbar-->
+    <ul class='progress'>
+      <li class='active'>Starting Panel</li>
+      <li>Manhunt Details</li>
+      <li>Help</li>
+    </ul>
+    <!--Social Profiles-->
+    <fieldset>
+      <h3 class='sub-title'>(ID:- Your Unique ID you got while creating your manhunt server)</h3>
+      <input type="text" name="uniqueID" id="uniqueID" placeholder="Your Unique ID">
+      <input type='button' name='next' class='start-button custom-button' value="Start" id='start'>
+    </fieldset>
+
+    <fieldset>
+      <h2 class='title'>Manhunt Details</h2>
+      <h3 class='sub-title'>The Fixed Details of your Manhunt</h3>
+      <hr style="margin-bottom: 10px;">
+      <h3 class='sub-title'>Seed: Random</h3>
+      <h3 class='sub-title'>Slots: 10</h3>
+      <h3 class='sub-title'>IP: manhuntofficial.tk</h3>
+      <h3 class='sub-title'>Bedrock Port: 69691</h3>
+      <hr style="margin-bottom: 10px;">
+      <h3 class='sub-title'>After the Speedrunner dies, all the player will get OP access and then the server will close after 5 minutes.</h3>
+    </fieldset>
+
+    <script src="database.js"></script>
+    <script src="start.js"></script>
+  </form>
+</body>
+
+</html>
